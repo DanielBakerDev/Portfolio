@@ -37,7 +37,7 @@ class Login extends Controller
         unset($_SESSION['automatic_username']);
         unset($_SESSION['automatic_name']);
 
-        if (!isset($_COOKIE['ghostly_user'])) {
+        if (!isset($_COOKIE['site_user'])) {
             header("refresh:0;" . _SITEROOT_ . "login");
         }
         exit;
