@@ -1,0 +1,46 @@
+<h1 style="color:white; font-weight:bolder; font-size:20pt; font-family: Arial, Helvetica, sans-serif;">Profile</h1>
+<div class="vert-container">
+    <menu type="toolbar" class="menu">
+        <h2 class="menu-name" style="color:white; font-weight:bolder; font-size:20pt; font-family: Arial, Helvetica, sans-serif;">Profile</h2>
+    </menu>
+
+    <section class="chat">
+        <div class="error-container col-lg-6 col-md-7 col-sm-7 center margin-down">
+            <div class="card" style="background-image: url('../../../assets/img/yupp.jpg'); margin-bottom: 50px;">
+                <div class="card-body">
+                    <h2 style="color:black; font-weight:bolder; font-size:20pt; font-family: Arial, Helvetica, sans-serif;">Edit Profile</h2>
+                    <div class="callout-footer ml-lg-auto">
+                        <form id="updateUser">
+                            <div class="input" style="margin-bottom: 10px;">
+                                <input type="text" name="name" class="form-control" value=<?= $this->user['name'] ?>>
+                            </div>
+                            <div class="input" style="margin-bottom: 10px;">
+                                <input type="text" name="username" class="form-control" value=<?= $this->user['username'] ?>>
+                            </div>
+                            <div class="input" style="margin-bottom: 10px;">
+                                <input type="text" name="email" class="form-control" value=<?= $this->user['email'] ?>>
+                            </div>
+                            <div class="input" style="margin-bottom: 10px;">
+                                <input type="text" placeholder="Password" name="password" class="form-control" data-role="tagsinput" required>
+                            </div>
+                            <div class="input" style="margin-bottom: 10px;">
+                                <p style="color:black; font-weight:bolder; font-size:15pt; font-family: Arial, Helvetica, sans-serif;">Profile Picture</p>
+                                <input type="hidden" name="MAX_FILE_SIZE" value="512000" />
+                                <input name="userfile" type="file" />
+                            </div>
+                            <div>
+                            <div class="input float-right" style="margin-bottom: 10px; margin-left: 10px;">
+                                <button type="submit" class="btn btn-primary " style="background-color: black; border-color:black;  font-weight:bolder; font-size:10pt; font-family: Arial, Helvetica, sans-serif; padding-right: 10px;">Update</button>
+                            </div>
+                            <div class="input float-right">
+                                <button type="cancel" class="btn btn-primary " style="background-color: black; border-color:black;  font-weight:bolder; font-size:10pt; font-family: Arial, Helvetica, sans-serif;">Cancel</button>
+                            </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+</main>

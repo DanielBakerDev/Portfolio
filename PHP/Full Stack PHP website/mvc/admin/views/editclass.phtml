@@ -1,0 +1,36 @@
+<div class="sidenav">
+    <a href="/admin/users">Users</a>
+    <a href="/admin/class">Classes</a>
+    <a href="/admin/userClass">Users in Classes</a>
+    <a href="/admin/projects">Projects</a>
+</div>
+<div class="notify"></div>
+<h2>Edit</h2>
+<div class="small-content">
+    <form id="editClass">
+        <div class="input">
+            <label>Class Name</label>
+            <input type="text" name="name" class="form-control" placeholder="Class Name" value="<?= $this->class['className'] ?>">
+        </div>
+        <div class="input">
+            <label>Institution</label>
+            <input type="text" name="institution" class="form-control" placeholder="Institution" value="<?= $this->class['institution'] ?>">
+        </div>
+        <div class="input">
+            <label>Description</label>
+            <input type="text" placeholder="Description" name="description" class="form-control" data-role="tagsinput" value="<?= $this->class['description'] ?>">
+        </div>
+        <div class="input">
+            <label>Class Password</label>
+			<input type="text" placeholder="Password" name="password" class="form-control" data-role="tagsinput" value="<?= $this->class['classPassword'] ?>">
+        </div>
+        <div class="input">
+            <label>Class Profile Picture</label>
+            <input type="text" placeholder="Profile Picture" name="profilePicture" class="form-control" data-role="tagsinput" value="<?= $this->class['profilePicture'] ?>">
+        </div>
+        <div class="input">
+            <a href="/admin/class" class="btn btn-primary float-left">Back</a>
+            <button type="submit" class="btn btn-primary float-right">Update</button>
+        </div>
+    </form>
+</div>

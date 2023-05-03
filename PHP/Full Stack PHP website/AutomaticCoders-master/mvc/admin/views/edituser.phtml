@@ -1,0 +1,44 @@
+<div class="sidenav">
+	<a href="/admin/users">Users</a>
+	<a href="/admin/class">Classes</a>
+	<a href="/admin/userClass">Users in Classes</a>
+	<a href="/admin/projects">Projects</a>
+</div>
+<div class="notify">
+</div>
+<h2>Edit</h2>
+<div class="small-content">
+	<form id="editUser">
+		<div class="input">
+			<label>Name</label>
+			<input type="text" name="name" class="form-control" placeholder="Name" value="<?= $this->user['name'] ?>">
+		</div>
+		<div class="input">
+			<label>Email</label>
+			<input type="text" name="email" class="form-control" placeholder="Email" value="<?= $this->user['email'] ?>">
+		</div>
+		<div class="input">
+			<label>Username</label>
+			<input type="text" name="username" class="form-control" placeholder="Username" value="<?= $this->user['username'] ?>">
+		</div>
+		<div class="input">
+			<label>Password</label>
+			<input type="text" placeholder="Password" name="password" class="form-control" data-role="tagsinput" value="<?= $this->user['password'] ?>">
+		</div>
+		<div class="input">
+			<label>Student</label>
+			<input type="checkbox" id="isStudent" name="isStudent" value="<?= $this->user['isStud'] == 1 ? 1 : 0; ?>" <?php if ($this->user['isStud'] == 1) : ?> checked <?php endif; ?> />
+			<label>Proffessor</label>
+			<input type="checkbox" id="isProffessor" name="isProffessor" value="<?= $this->user['isProf'] == 1 ? 1 : 0; ?>" <?php if ($this->user['isProf'] == 1) : ?> checked <?php endif; ?> />
+		</div>
+
+		<div class="input">
+			<label>Profile Picture</label>
+			<input type="text" placeholder="Profile Picture" name="profilePicture" class="form-control" data-role="tagsinput" value="<?= $this->user['profilePicture'] ?>">
+		</div>
+		<div class="input">
+			<a href="/admin/users" class="btn btn-primary float-left">Back</a>
+			<button type="submit" class="btn btn-primary float-right">Update</button>
+		</div>
+	</form>
+</div>

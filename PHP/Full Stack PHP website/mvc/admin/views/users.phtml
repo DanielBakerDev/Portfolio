@@ -1,0 +1,39 @@
+<div class="sidenav">
+    <a href="/admin/users">Users</a>
+    <a href="/admin/class">Classes</a>
+    <!-- <a href="/admin/userClass">Users in Classes</a>
+    <a href="/admin/projects">Projects</a> -->
+</div>
+<h3>Users</h3>
+<div class="div-main">
+    <h3>Users</h3>
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Username</th>
+            <th>Password</th>
+            <th>Role</th>
+            <th>Profile Picture</th>
+            <th></th>
+            <th></th>
+        </tr>
+
+        <?php foreach ($this->users as $user) : ?>
+        <tr>
+            <th><?= $user['id'] ?></th>
+            <th><?= $user['name'] ?></th>
+            <th><?= $user['username'] ?></th>
+            <th><?= $user['password'] ?></th>
+            <?php if ($user['isProf'] == '1') : ?>
+            <th>Professor</th>
+            <?php else : ?>
+            <th>Student</th>
+            <?php endif; ?>
+            <th><?= $user['profilePicture'] ?></th>
+            <th><a href="edituser/<?= $user['id'] ?>">Edit</a></th>
+            <th><a href="#" id="deleteUser" data-user-id="<?= $user['id'] ?>">Delete</a></th>
+        </tr>
+        <?php endforeach; ?>
+    </table>
+</div>

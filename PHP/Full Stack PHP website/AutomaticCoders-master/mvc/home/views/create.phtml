@@ -1,0 +1,40 @@
+<div class="vert-container">
+    <menu type="toolbar" class="menu">
+        <h2 class="menu-name" style="color:white; font-weight:bolder; font-size:20pt; font-family: Arial, Helvetica, sans-serif;">Create a Class</h2>
+    </menu>
+    <section class="chat" style="background-image: url('../../../assets/img/yupp.jpg'); opacity:0.9;">
+        <div class="error-container col-lg-8  center margin-down">
+            <div class="card" style="background-image: url('../../../assets/img/yupp.jpg'); padding:50px; border-width:15px; border-color:black; ">
+                <div class="card-body">
+                <h2 style="color:black; font-weight:bolder; font-size:50pt; font-family: Arial, Helvetica, sans-serif;">Enter Classroom Info</h2>
+                    <div class="callout-footer ml-lg-auto">
+                        <form id="createClass" method="post">
+                            <div class="input" style="margin-bottom: 10px;">
+                                <input type="text" name="className" class="form-control" placeholder="Class Name">
+                            </div>
+                            <div class="input" style="margin-bottom: 10px;">
+                                <input type="text" name="institution" class="form-control" placeholder="Institution">
+                            </div>
+                            <div class="input" style="margin-bottom: 10px;">
+                                <input type="text" name="description" class="form-control" placeholder="Description">
+                            </div>
+                            <div class="input" style="margin-bottom: 10px;">
+                                <input type="password" placeholder="Password" name="password" class="form-control"
+                                    data-role="tagsinput" required>
+                            </div>
+                            <div class="input black-text" style="margin-bottom: 10px;">
+                                <input type="hidden" name="MAX_FILE_SIZE" value="512000" />
+                                <input name="userfile"  type="file" />
+                            </div>
+
+                            <div class="input">
+                                <button type="submit" class="btn btn-primary float-right"  style="background-color: black; border-color:black;">CREATE</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+</main>

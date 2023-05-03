@@ -1,0 +1,10 @@
+POST http://localhost:8080/api/pos
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"id":0,"vendorid":4, "amount": 3333.048, "datecreated": "2020-10-11@16:24:52" ,"podate": "2020-10-11", "items":[{"id":0, "poid":0,"price": 10,"qty":10,"productid": "45X23","productname":""},
+  {"id": 0,"poid":0, "price":30.99,"qty":5, "productid": "45X29","productname":""},
+  {"id": 0,"poid":0, "price":5,"qty":5, "productid": "45X30","productname":""}]}
+
+###

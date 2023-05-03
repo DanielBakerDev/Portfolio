@@ -1,0 +1,153 @@
+<aside class="channels">
+	<header class="channels-header focusable">
+        <h3 role="header" class="channels-header-name">Notifications</h3>
+        <svg role="button" aria-label="Dropdown" class="channels-header-dropdown">
+            <use xlink:href="#icon-dropdown" /></svg>
+    </header>
+
+    <section class="channels-list">
+        <header class="channels-list-header focusable">
+			<a href="notifications/messages">
+				<h5>Messages</h5>
+			</a>
+        </header>
+		<header class="channels-list-header focusable">
+			<a href="notifications\notify">
+				<h5>Notifications</h5>
+			</a>
+        </header>
+		<header class="channels-list-header focusable">
+			<a href="notifications\bids">
+				<h5>Project Bids</h5>
+			</a>
+        </header>
+    </section>
+
+	<footer class="channels-footer">
+		<img class="avatar" alt="Avatar" src="../../../assets/img/profilePictures/<?= $_SESSION['automatic_profile_pic']; ?>" />
+		<div class="channels-footer-details">
+			<span class="username"><?php echo $_SESSION['automatic_name'] ?></span>
+			<span class="tag"></span>
+		</div>
+		<div class="channels-footer-controls button-group">
+			<a href="/notifications">
+				<button role="button" aria-label="Deafen" class="button button-deafen"><svg>
+						<use xlink:href="#icon-deafen" />
+					</svg></button>
+			</a>
+			<a href="/profile">
+				<button role="button" aria-label="Settings" class="button button-settings"><svg>
+						<use xlink:href="#icon-settings" />
+					</svg></button>
+			</a>
+		</div>
+	</footer>
+</aside>
+<div class="notify"></div>
+<div class="vert-container">
+	<menu type="toolbar" class="menu">
+		<h2 class="menu-name" id="menu-name">Notifications and Messages</h2>
+	</menu>
+
+	<section class="chat">
+		<div>
+			
+		</div>
+
+		<!-- <div class="message-2qnXI6 cozyMessage-3V1Y8y wrapper-2a6GCs cozy-3raOZG zalgo-jN1Ica" id="chat-messages-755907444634288188" role="group" tabindex="-1"><div class="contents-2mQqc9" role="document"><span class="latin24CompactTimeStamp-2V7XIQ timestamp-3ZCmNB timestampVisibleOnHover-2bQeI4 alt-1uNpEt"><span aria-label="5:46 PM"><i class="separator-2nZzUB" aria-hidden="true">[</i>5:46 PM<i class="separator-2nZzUB" aria-hidden="true">] </i></span></span><div class="markup-2BOw-j messageContent-2qWWxC">so cheap</div></div><div class="container-1ov-mD"></div><div class="buttonContainer-DHceWr"><div class="buttons-cl5qTG container-3npvBV" aria-label="Message Actions"><div class="wrapper-2aW0bm"><div class="button-1ZiXG9" aria-label="Add Reaction" aria-controls="popout_113" aria-expanded="false" role="button" tabindex="0"><svg class="icon-3Gkjwa" aria-hidden="false" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M12.2512 2.00309C12.1677 2.00104 12.084 2 12 2C6.477 2 2 6.477 2 12C2 17.522 6.477 22 12 22C17.523 22 22 17.522 22 12C22 11.916 21.999 11.8323 21.9969 11.7488C21.3586 11.9128 20.6895 12 20 12C15.5817 12 12 8.41828 12 4C12 3.31052 12.0872 2.6414 12.2512 2.00309ZM10 8C10 6.896 9.104 6 8 6C6.896 6 6 6.896 6 8C6 9.105 6.896 10 8 10C9.104 10 10 9.105 10 8ZM12 19C15.14 19 18 16.617 18 14V13H6V14C6 16.617 8.86 19 12 19Z"></path><path d="M21 3V0H19V3H16V5H19V8H21V5H24V3H21Z" fill="currentColor"></path></svg></div><div class="button-1ZiXG9" aria-label="More" aria-controls="popout_114" aria-expanded="false" role="button" tabindex="0"><svg class="icon-3Gkjwa" aria-hidden="false" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M7 12.001C7 10.8964 6.10457 10.001 5 10.001C3.89543 10.001 3 10.8964 3 12.001C3 13.1055 3.89543 14.001 5 14.001C6.10457 14.001 7 13.1055 7 12.001ZM14 12.001C14 10.8964 13.1046 10.001 12 10.001C10.8954 10.001 10 10.8964 10 12.001C10 13.1055 10.8954 14.001 12 14.001C13.1046 14.001 14 13.1055 14 12.001ZM19 10.001C20.1046 10.001 21 10.8964 21 12.001C21 13.1055 20.1046 14.001 19 14.001C17.8954 14.001 17 13.1055 17 12.001C17 10.8964 17.8954 10.001 19 10.001Z"></path></svg></div></div></div></div></div> -->
+	</section>
+	<div class="input">
+		<button type="submit" class="btn btn-primary float-right" data-toggle="modal" data-target="#exampleModal" style="background-color: red; border-color:black;">New Message/Alert</button>
+	</div>
+</div>
+</main>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" style="color: black;" id="exampleModalLabel">New Message</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<form id="createMsg">
+					<div class="form-group form-group-default">
+						<label style="color: black;">Subject</label>
+						<div class="controls">
+							<input type="text" id="type" name="type" placeholder="Subject" class="form-control" autocomplete="off" required>
+						</div>
+					</div>
+					<div class="form-group form-group-default">
+						<label style="color: black;">Message</label>
+						<div class="controls">
+							<input type="text" id="message" name="message" placeholder="Message" class="form-control" autocomplete="off" required>
+						</div>
+					</div>
+					<div class="form-group form-group-default">
+						<label style="color: black;">Send To</label>
+						<!-- <div class="controls">
+							<input type="text" id="userid" name="userid" placeholder="Send To" class="form-control" autocomplete="off" required>
+						</div> -->
+						<select id="userid" name="userid" class="form-control" > <!-- style="width: 100%; margin-bottom:10px;" -->
+							<?php foreach ($this->users as $user) : ?>
+								<option value="<?= $user['id']; ?>" data-user-id="<?= $user['id']; ?>"> <?= $user['name']; ?> </option>
+							<?php endforeach; ?>
+						</select>
+						
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						<button type="submit" class="btn btn-primary">Send Message</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="rateUserModal" tabindex="-1" role="dialog" aria-labelledby="rateUserModal" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" style="color: black;" id="exampleModalLabel">New Message</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<form id="createMsg">
+					<div class="form-group form-group-default">
+						<label style="color: black;">Subject</label>
+						<div class="controls">
+							<input type="text" id="type" name="type" placeholder="Subject" class="form-control" autocomplete="off" required>
+						</div>
+					</div>
+					<div class="form-group form-group-default">
+						<label style="color: black;">Message</label>
+						<div class="controls">
+							<input type="text" id="message" name="message" placeholder="Message" class="form-control" autocomplete="off" required>
+						</div>
+					</div>
+					<div class="form-group form-group-default">
+						<label style="color: black;">Send To</label>
+						<!-- <div class="controls">
+							<input type="text" id="userid" name="userid" placeholder="Send To" class="form-control" autocomplete="off" required>
+						</div> -->
+						<select id="userid" name="userid" class="form-control" > <!-- style="width: 100%; margin-bottom:10px;" -->
+							<?php foreach ($this->users as $user) : ?>
+								<option value="<?= $user['id']; ?>" data-user-id="<?= $user['id']; ?>"> <?= $user['name']; ?> </option>
+							<?php endforeach; ?>
+						</select>
+						
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						<button type="submit" class="btn btn-primary">Send Message</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

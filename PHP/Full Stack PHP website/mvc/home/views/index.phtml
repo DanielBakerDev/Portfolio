@@ -1,0 +1,61 @@
+<div class="vert-container" >
+    <menu type="toolbar" class="menu">
+        <h2 class="menu-name" style="color:white; font-weight:bolder; font-size:20pt; font-family: Arial, Helvetica, sans-serif;">Home</h2>
+    </menu>
+
+    <section class="chat" style="background-image: url('../../../assets/img/cheat.png'); opacity:0.9; width:100%; height: auto;">
+        <div>
+		<h3>Classes</h3>
+            <?php foreach ($this->classesNotIn as $class) : ?>
+            <a class="roomListA" data-toggle="modal" data-target="#exampleModal" id="<?= $class['id'] ?>">
+
+                <div class="servers-collection">
+                    <div class="server focusable" role="button" aria-label="My Server" aria-selected="true">
+                        <div class="server-icon"><img
+                                src="../../../assets/img/classPictures/<?= $class['profilePicture'] ?>" />
+
+                        </div>
+                    </div>
+                    <h5 id="classRoom"><?php echo $class['className'] ?></h5>
+                    <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                                Join Class
+                            </button> -->
+                </div>
+            </a>
+            <?php endforeach; ?>
+        </div>
+
+
+    </section>
+</div>
+</main>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" style="color: black;" id="exampleModalLabel">Join Class</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="joinClassRoom" method="post">
+                    <div class="form-group form-group-default">
+                        <label style="color: black;">Password</label>
+                        <div class="controls">
+                            <input type="text" id="classPassword" name="classPassword" placeholder="password"
+                                class="form-control" autocomplete="off" required>
+                            <input type="hidden" id="classId" name="classId" class="form-control" autocomplete="off" />
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Join Class</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,33 @@
+<div class="sidenav">
+    <a href="/admin/users">Users</a>
+    <a href="/admin/class">Classes</a>
+</div>
+<div class="div-main">
+    <h3>Classes</h3>
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Class Name</th>
+            <th>Institution</th>
+            <th>Description</th>
+            <th>Profile Picture</th>
+            <th>Class Password</th>
+            <th>Date Created</th>
+            <th></th>
+            <th></th>
+        </tr>
+        <?php foreach ($this->classes as $class) : ?>
+            <tr>
+                <th><?= $class['id'] ?></th>
+                <th><?= $class['className'] ?></th>
+                <th><?= $class['institution'] ?></th>
+                <th><?= $class['description'] ?></th>
+                <th><?= $class['profilePicture'] ?></th>
+                <th><?= $class['classPassword'] ?></th>
+                <th><?= $class['dateCreated'] ?></th>
+                <th><a href="editclass/<?= $class['id'] ?>">Edit</a></th>
+                <th><a href="#" id="deleteClass" data-user-id="<?= $class['id'] ?>">Delete</a></th>
+            </tr>
+        <?php endforeach; ?>
+    </table>
+</div>

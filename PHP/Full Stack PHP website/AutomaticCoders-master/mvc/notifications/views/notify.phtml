@@ -1,0 +1,106 @@
+<aside class="channels">
+	<header class="channels-header focusable">
+		<h3 role="header" class="channels-header-name" style="color:white; font-weight:bolder; font-size:15pt; font-family: Arial, Helvetica, sans-serif;">Notifications</h3>
+		<svg role="button" aria-label="Dropdown" class="channels-header-dropdown">
+			<use xlink:href="#icon-dropdown" /></svg>
+	</header>
+
+	<section class="channels-list">
+	<header class="channels-list-header focusable">
+			<a href="/notifications/messages">
+				<h5 style="color:white; font-weight:bolder; font-family: Arial, Helvetica, sans-serif;">Messages</h5>
+			</a>
+		</header>
+		<header class="channels-list-header focusable">
+			<a href="/notifications/notify">
+				<h5 style="color:white; font-weight:bolder; font-family: Arial, Helvetica, sans-serif;">Notifications</h5>
+			</a>
+		</header>
+		<header class="channels-list-header focusable">
+			<a href="/notifications/bids">
+				<h5 style="color:white; font-weight:bolder; font-family: Arial, Helvetica, sans-serif;">Project Bids</h5>
+			</a>
+		</header>
+	</section>
+
+	<footer class="channels-footer">
+		<img class="avatar" alt="Avatar" src="../../../assets/img/profilePictures/<?= $_SESSION['automatic_profile_pic']; ?>" />
+		<div class="channels-footer-details">
+			<span class="username"><?php echo $_SESSION['automatic_name'] ?></span>
+			<span class="tag"></span>
+		</div>
+		<div class="channels-footer-controls button-group">
+			<a href="/login/logout">
+				<button role="button" aria-label="Mute" class="button button-mute"><svg>
+						<use xlink:href="#icon-mute" />
+					</svg></button>
+			</a>
+			<a href="/notifications">
+				<button role="button" aria-label="Deafen" class="button button-deafen"><svg>
+						<use xlink:href="#icon-deafen" />
+					</svg></button>
+			</a>
+			<a href="/profile">
+				<button role="button" aria-label="Settings" class="button button-settings"><svg>
+						<use xlink:href="#icon-settings" />
+					</svg></button>
+			</a>
+		</div>
+	</footer>
+</aside>
+
+<div class="vert-container">
+	<menu type="toolbar" class="menu">
+		<h2 class="menu-name" id="menu-name" style="color:white; font-weight:bolder; font-family: Arial, Helvetica, sans-serif;">Notifications and Messages</h2>
+	</menu>
+
+	<section class="chat" style="background-image: url('../../../assets/img/yupp.jpg');">
+		<div>
+			<h1 style="color:black; font-weight:bolder; font-family: Arial, Helvetica, sans-serif;">New Notifications</h1>
+			<table>
+				<tr style="background-color:black;">
+					<th style="color:white; font-weight:bolder; font-family: Arial, Helvetica, sans-serif;">Subject</th>
+					<th style="color:white; font-weight:bolder; font-family: Arial, Helvetica, sans-serif;">Message</th>
+					<!-- <th>Sender</th> -->
+					<th style="color:white; font-weight:bolder; font-family: Arial, Helvetica, sans-serif;">Date Sent</th>
+					<th style="color:white; font-weight:bolder; font-family: Arial, Helvetica, sans-serif;"></th>
+				</tr>
+
+				<?php foreach ($this->notificationsUnread as $notify) : ?>
+					<tr style="background-color:black;">
+						<th style="color:white; font-weight:bolder; font-family: Arial, Helvetica, sans-serif;" <?php echo "onclick='()'" ?>> <?= $notify['type'] ?></th>
+						<th style="color:white; font-weight:bolder; font-family: Arial, Helvetica, sans-serif;"><?= $notify['message'] ?></th>
+
+						<th style="color:white; font-weight:bolder; font-family: Arial, Helvetica, sans-serif;"><?= $notify['date'] ?></th>
+						<th style="color:white; font-weight:bolder; font-family: Arial, Helvetica, sans-serif;"><a href="#" id="markNotificationAsRead" data-notification-id="<?= $notify['id'] ?>">Mark as read</a></th>
+					
+
+
+					</tr>
+				<?php endforeach; ?>
+			</table>
+		</div>
+
+		<div>
+			<h1 style="color:black; font-weight:bolder; font-family: Arial, Helvetica, sans-serif;">Old Notifications</h1>
+			<table>
+				<tr style="background-color:black;">
+					<th style="color:white; font-weight:bolder; font-family: Arial, Helvetica, sans-serif;">Subject</th>
+					<th style="color:white; font-weight:bolder; font-family: Arial, Helvetica, sans-serif;">Message</th>
+					<!-- <th>Sender</th> -->
+					<th style="color:white; font-weight:bolder; font-family: Arial, Helvetica, sans-serif;">Date Sent</th>
+				</tr>
+
+				<?php foreach ($this->notificationsRead as $notify) : ?>
+					<tr style="background-color:black;">
+						<th style="color:white; font-weight:bolder; font-family: Arial, Helvetica, sans-serif;" <?php echo "onclick='()'" ?>> <?= $notify['type'] ?></th>
+						<th style="color:white; font-weight:bolder; font-family: Arial, Helvetica, sans-serif;"><?= $notify['message'] ?></th>
+
+						<th style="color:white; font-weight:bolder; font-family: Arial, Helvetica, sans-serif;"><?= $notify['date'] ?></th>
+					</tr>
+				<?php endforeach; ?>
+			</table>
+		</div>
+	</section>
+</div>
+</main>
