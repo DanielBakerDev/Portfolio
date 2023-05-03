@@ -1,0 +1,8 @@
+My GPT-2 Story:
+---------------
+A decoder-only architecture is being used, but right-padding was detected! For correct generation results, please set `padding_side='left'` when initializing the tokenizer.
+The new series begins with the release of "A Thousand Years of Darkness," the first of new stories from the world's oldest writer since Thomas Harris in the 1836 novel "A Thousand Years of Dark."
+
+The first half of the story is a classic of fantasy as well as graphic novel in that it examines the history of the world between the wars and the post-war expansion of Western society. As the series progresses, the story progresses through various themes that all focus on a human connection to power: power to life, love, and what it means to be human in our daily lives.
+
+As you read the rest of the first book, you'll notice the most interesting bits of information emerge from the books themselves (the characters' real names, the various relationships, different powers, the nature of conflict, etc.). Some of these clues might be interesting for a quick read. I'll be going a little further into detail here and will provide some more examples as we get more

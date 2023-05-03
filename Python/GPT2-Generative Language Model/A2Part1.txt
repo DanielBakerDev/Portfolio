@@ -1,0 +1,27 @@
+
+Examine the output from both models given our test query, “I am looking for a job.”
+
+1. Identify two differences in the overall results of the two methods and explain why these differences might 
+be occurring.
+1) Some posts in first query appear to have nothing to do with looking for job while all of 2 do
+This difference might be occurring because the first method uses far less processing to understand what the actual meaning of the tweets are compared
+to the second method that takes far longer to analyze each tweet and get a realistic meaning.
+2) Query 2 appears to have more pictures and hashtags while query 1 has more emojis.
+This is an interesting difference which may be caused by either:
+a) Differences in the linguistic writing of people using pictures emojis and hashtags (EX: people who use emojis tend to be more descriptive in
+their writing)
+b) The models give different weights of similarity based on these special characters. The first method has a bias towards emojis and gives them
+a significant boost when used in a tweet.
+The second model gives a significant bias towards hashtags and pictures. Meaning that tweets that have something to do with our query get an even 
+larger boost when a picture or hashtag is used as well.
+
+
+2. Try out the query in Twitter’s own search on their website. 
+(Note you don’t need an account to try it.) 
+Do you think Twitter might be using a semantic search technique like the ones you tried? Why or why not?
+I don't think so, when doing the twitter search it was first incredibly fast and when doing our searches over less tweets
+it takes our program far longer to run. Using any sort of ML NLP model to search through large amounts of data would be
+expensive for twitter to run in cost and time. Second the results that come from twitter seem to be matching words/phrases in
+the text we are searching rather than for searching for the meaning of the text that we did in our methods. It appears
+as if twitter uses a simpler search based on keyword finder.
+
