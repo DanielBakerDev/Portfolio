@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Welcome to Stock Recorder</string>
+    <string name="app_name2">Stock Recorder</string>
+
+    <string name="Edit">Edit and View Existing Stocks</string>
+    <string name="AddNewStock">Add a New Stock</string>
+    <string name="Settings">Settings</string>
+    <string name="DeleteLast">Delete Last Entry</string>
+    <string name="EditStock">Choose and Edit Existing Stock to enter Final Price</string>
+
+    <string name="EnterClosingPrice">Enter the Price Sold</string>
+    <string name="ClosingDate">Enter the Closing Date in format (dd-mm-yyyy)</string>
+
+    <string name="Total">Total Gains</string>
+
+    <string name="AddHeader">Add a new Stock</string>
+    <string name="AddName">AddName</string>
+    <string name="Ticker">Ticker</string>
+    <string name="Listing">Listing</string>
+    <string name="Price">Price Purchased</string>
+    <string name="NumberOfShares">Number Of Shares</string>
+
+    <string name="nasdaq">Nasdaq</string>
+    <string name="nyse">NYSE</string>
+
+    <string name="SubmitUpdate">Submit Update</string>
+    <string name="Submit">Submit</string>
+    <string name="Return">Return to Home</string>
+
+    <string name="Clear">Clear All Records</string>
+    <string name="SettingsInfo">Welcome to Stock Recorder where we provide with you with the Tools to record your Portfolio Gains! \n
+        To add a new Stock simply go to "Add New Stock" on the homepage than enter required information and Submit! \n
+        To View Existing Stocks simply go to "Edit And View Existing Stocks" where you can edit and view current entries! \n
+        In the View Existing Stocks it will allow you do close out a stock\n
+        On the Home Page we will display for you your current portfolio gains! \n
+        Good luck making that Money! \n
+    </string>
+</resources>
